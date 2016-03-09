@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample app</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
-<body ng-app>
-${run.port}
+<body ng-app="sampleapp">
+
+<div ng-controller="product">
+    <table>
+        <tr ng-repeat="p in products">
+            <td>{{p}}</td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
